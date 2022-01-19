@@ -57,6 +57,7 @@ public class Act2App {
 	}
 
 	// funcion encontrar serie con mas temporadas
+	
 	public static void mostrarTemporadas() {
 		Serie masTemporadas = new Serie();
 		for (int i = 0; i < series.length; i++) {
