@@ -1,6 +1,6 @@
-package Serie;
+package Clases;
 
-public class VIdeojuego implements Entregable{
+public class VIdeojuego implements Entregable {
 	// Atributos
 
 	private String titulo;
@@ -34,33 +34,33 @@ public class VIdeojuego implements Entregable{
 		this.genero = genero;
 		this.compania = compania;
 	}
-	
-	//funciones 
-	
-		public void entregar() {
-			// TODO Auto-generated method stub
-			this.entregado=true;
+
+	// funciones
+
+	public void entregar() {
+		// TODO Auto-generated method stub
+		this.entregado = true;
+	}
+
+	public void devolver() {
+		// TODO Auto-generated method stub
+		this.entregado = false;
+	}
+
+	public boolean isEntregado() {
+		// TODO Auto-generated method stub
+		return this.entregado;
+	}
+
+	public boolean compareTo(Object a) {
+		// TODO Auto-generated method stub
+		if (this.horasEstimadas > ((VIdeojuego) a).getHorasEstimadas()) {
+			return true;
+		} else {
+			return false;
 		}
 
-		public void devolver() {
-			// TODO Auto-generated method stub
-			this.entregado=false;
-		}
-
-		public boolean isEntregado() {
-			// TODO Auto-generated method stub
-			return this.entregado;
-		}
-
-		public boolean compareTo(Object a) {
-			// TODO Auto-generated method stub
-			if (this.horasEstimadas > ((VIdeojuego) a).getHorasEstimadas()) {
-				return true;
-			} else {
-				return false;
-			}
-			
-		}
+	}
 
 	// Getters y Setters
 	public String getTitulo() {
@@ -102,8 +102,5 @@ public class VIdeojuego implements Entregable{
 		return "VIdeojuego [titulo=" + titulo + ", horasEstimadas=" + horasEstimadas + ", entregado=" + entregado
 				+ ", genero=" + genero + ", compania=" + compania + "]";
 	}
-
-	
-
 
 }

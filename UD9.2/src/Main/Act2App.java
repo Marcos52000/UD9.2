@@ -1,11 +1,15 @@
-package Serie;
+package Main;
 
 import javax.swing.JOptionPane;
+
+import Clases.Serie;
+import Clases.VIdeojuego;
+
 import javax.swing.JOptionPane;
 
 public class Act2App {
-	public static VIdeojuego[] juegos = new VIdeojuego[5];
-	public static Serie[] series = new Serie[5];
+	public static VIdeojuego[] juegos = new VIdeojuego[2];
+	public static Serie[] series = new Serie[2];
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -38,6 +42,7 @@ public class Act2App {
 	}
 
 	// funcion encontrar videojuegos y series entregados
+	
 	public static void entregados() {
 		int cont = 0;
 		System.out.println("-----------------------------------");
@@ -71,6 +76,7 @@ public class Act2App {
 	}
 
 	// funcion encontrar videojuego con mas horas
+	
 	public static void mostrarHoras() {
 		VIdeojuego masHoras = new VIdeojuego();
 		for (int i = 0; i < juegos.length; i++) {
@@ -85,9 +91,9 @@ public class Act2App {
 
 	public static void mostrar() {
 		series[0].entregar();
-		series[4].entregar();
+		//series[1].entregar();
 		juegos[1].entregar();
-		juegos[2].entregar();
+		//juegos[2].entregar();
 		System.out.println("Series:");
 		for (int i = 0; i < series.length; i++) {
 			System.out.println(series[i].toString());

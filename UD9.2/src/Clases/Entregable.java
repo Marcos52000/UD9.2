@@ -1,4 +1,4 @@
-package Serie;
+package Clases;
 
 public interface Entregable {
 	

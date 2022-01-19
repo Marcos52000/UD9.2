@@ -1,4 +1,4 @@
-package Serie;
+package Clases;
 
 public class Serie implements Entregable {
 	// atributos
@@ -8,8 +8,35 @@ public class Serie implements Entregable {
 	private String genero;
 	private String creador;
 
-	// funciones 
-	
+	// constructores
+
+	public Serie() {
+		this.titulo = titulo;
+		this.numeroTemporadas = 3;
+		this.genero = genero;
+		this.creador = creador;
+		this.entregado = false;
+	}
+
+	public Serie(String titulo, String creador) {
+		this.titulo = titulo;
+		this.numeroTemporadas = 3;
+		this.genero = "";
+		this.creador = creador;
+		this.entregado = false;
+	}
+
+	public Serie(String titulo, int numeroTemporadas, String genero, String creador) {
+		super();
+		this.titulo = titulo;
+		this.numeroTemporadas = numeroTemporadas;
+		this.genero = genero;
+		this.creador = creador;
+		this.entregado = false;
+	}
+
+	// funciones
+
 	public void entregar() {
 		// TODO Auto-generated method stub
 		this.entregado = true;
@@ -33,36 +60,9 @@ public class Serie implements Entregable {
 			return false;
 		}
 	}
-	
-	// constructores 
-	
-		public Serie() {
-			this.titulo = titulo;
-			this.numeroTemporadas = 3;
-			this.genero = genero;
-			this.creador = creador;
-			this.entregado = false;
-		}
 
-		public Serie(String titulo, String creador) {
-			this.titulo = titulo;
-			this.numeroTemporadas = 3;
-			this.genero = "";
-			this.creador = creador;
-			this.entregado = false;
-		}
-		
-		public Serie(String titulo, int numeroTemporadas, String genero, String creador) {
-			super();
-			this.titulo = titulo;
-			this.numeroTemporadas = numeroTemporadas;
-			this.genero = genero;
-			this.creador = creador;
-			this.entregado = false;
-		}
-	
 	// getters y setters
-		
+
 	public String getTitulo() {
 		return titulo;
 	}
@@ -94,17 +94,11 @@ public class Serie implements Entregable {
 	public void setCreador(String creador) {
 		this.creador = creador;
 	}
-	
-	
 
-
-
-	
 	@Override
 	public String toString() {
 		return "Serie [titulo=" + titulo + ", numeroTemporadas=" + numeroTemporadas + ", entregado=" + entregado
 				+ ", genero=" + genero + ", creador=" + creador + "]";
 	}
-
 
 }
